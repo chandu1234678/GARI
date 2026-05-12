@@ -1,0 +1,19 @@
+@import './Pages.css';
+
+.team-page {
+  min-height: 100vh;
+}
+
+.team-section,
+.divisions-section {
+  margin-top: 4rem;
+}
+
+.team-section h2,
+.divisions-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-align: center;
+}

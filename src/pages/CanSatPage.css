@@ -1,0 +1,30 @@
+@import './Pages.css';
+
+.cansat-page {
+  min-height: 100vh;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.systems-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.systems-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
