@@ -90,7 +90,12 @@ const EMAIL_STYLES = `
     padding: 48px 32px; 
     text-align: center; 
   }
-  .logo { font-size: 48px; margin-bottom: 12px; line-height: 1; }
+  .logo-img { 
+    width: 60px; 
+    height: 60px; 
+    margin-bottom: 16px;
+    display: inline-block;
+  }
   .brand { 
     font-size: 28px; 
     font-weight: 700; 
@@ -192,7 +197,7 @@ function getNewsletterWelcomeEmail(email) {
     <body>
       <div class="wrapper">
         <div class="header">
-          <div class="logo">🚀</div>
+          <img src="https://raw.githubusercontent.com/chandu1234678/GARI/main/GARI/gari-react/public/gari-logo.png" alt="GARI Logo" style="width: 80px; height: 80px; margin-bottom: 16px;" />
           <div class="brand">GARI</div>
           <div class="tagline">GITAM Aerospace Research Initiative</div>
         </div>
@@ -242,7 +247,7 @@ function getContactConfirmationEmail(name, subject) {
     <body>
       <div class="wrapper">
         <div class="header">
-          <div class="logo">🚀</div>
+          <img src="https://raw.githubusercontent.com/chandu1234678/GARI/main/GARI/gari-react/public/gari-logo.png" alt="GARI Logo" style="width: 80px; height: 80px; margin-bottom: 16px;" />
           <div class="brand">GARI</div>
           <div class="tagline">GITAM Aerospace Research Initiative</div>
         </div>
@@ -267,7 +272,7 @@ function getContactConfirmationEmail(name, subject) {
         <div class="footer">
           <div class="footer-brand">GARI - GITAM Aerospace Research Initiative</div>
           <div style="margin: 8px 0;">GITAM University, Visakhapatnam</div>
-          <div style="margin: 8px 0;">📧 gari.team@gmail.com</div>
+          <div style="margin: 8px 0;">gari.team@gmail.com</div>
         </div>
       </div>
     </body>
@@ -282,13 +287,13 @@ function getLeadNotificationEmail(type, data) {
       <html>
       <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; color: #0f172a;">
         <div style="max-width: 600px; margin: 0 auto;">
-          <h3 style="color: #1a1a1a; margin-bottom: 20px;">🎯 New Newsletter Subscription</h3>
+          <h3 style="color: #1a1a1a; margin-bottom: 20px;">New Newsletter Subscription</h3>
           <div style="background: #f9fafb; padding: 20px; border-radius: 8px; border: 1px solid #e5e7eb;">
             <p style="margin: 8px 0;"><strong>Email:</strong> ${sanitizeHtml(data.email)}</p>
             <p style="margin: 8px 0;"><strong>Subscribed:</strong> ${new Date().toLocaleString()}</p>
           </div>
           <p style="color: #6b7280; font-size: 14px; margin-top: 20px;">
-            Subscriber has been added to the newsletter list and saved to database + Google Sheets.
+            Subscriber has been added to the newsletter list.
           </p>
         </div>
       </body>
@@ -372,7 +377,7 @@ async function handleNewsletter(email, apiKey, res) {
         body: JSON.stringify({
           sender: { name: 'GARI Team', email: 'factcheckai2@gmail.com' },
           to: [{ email: validatedEmail }],
-          subject: 'Welcome to GARI Newsletter 🚀',
+          subject: 'Welcome to GARI Newsletter',
           htmlContent: getNewsletterWelcomeEmail(validatedEmail),
         }),
       });
@@ -388,7 +393,7 @@ async function handleNewsletter(email, apiKey, res) {
         body: JSON.stringify({
           sender: { name: 'GARI Website', email: 'factcheckai2@gmail.com' },
           to: [{ email: 'bc833498@gmail.com', name: 'GARI Lead' }],
-          subject: '🎯 New Newsletter Subscription',
+          subject: 'New Newsletter Subscription',
           htmlContent: getLeadNotificationEmail('newsletter', { email: validatedEmail }),
         }),
       });
