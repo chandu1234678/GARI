@@ -17,3 +17,52 @@
   margin-bottom: 2rem;
   text-align: center;
 }
+
+/* Division Cards - Compact */
+.divisions-section .values-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.divisions-section .value-card {
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.divisions-section .value-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.divisions-section .value-card p {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .team-section,
+  .divisions-section {
+    margin-top: 2rem;
+  }
+
+  .team-section h2,
+  .divisions-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .divisions-section .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+  }
+
+  .divisions-section .value-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .divisions-section .value-card h3 {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+}

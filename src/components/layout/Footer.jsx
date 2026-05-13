@@ -1,9 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../common/Logo';
 import './Footer.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+  const [error, setError] = useState('');
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!email.trim()) {
+      return 'Email is required';
+    }
+    if (!emailRegex.test(email.trim())) {
+      return 'Invalid email format';
+    }
+    if (email.trim().length > 254) {
+      return 'Email is too long';
+    }
+    return '';
+  };
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Validate email
+    const validationError = validateEmail(email);
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+    
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setError('');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'newsletter',
+          email: email.trim(),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setEmail('');
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        console.error('Error subscribing:', data);
+        setSubmitStatus('error');
+        setError(data.error || 'Failed to subscribe');
+      }
+    } catch (error) {
+      console.error('Error submitting newsletter:', error);
+      setSubmitStatus('error');
+      setError('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -66,10 +131,36 @@ const Footer = () => {
             <div className="footer-column">
               <h4>Newsletter</h4>
               <p className="newsletter-text">Stay updated with our latest projects</p>
-              <div className="newsletter-form">
-                <input type="email" placeholder="Your email" className="newsletter-input" />
-                <button className="newsletter-button">Subscribe</button>
-              </div>
+              <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+                <input 
+                  type="email" 
+                  placeholder="Your email" 
+                  className={`newsletter-input ${error ? 'error' : ''}`}
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setError('');
+                  }}
+                  required
+                  disabled={isSubmitting}
+                />
+                <button 
+                  type="submit" 
+                  className="newsletter-button"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </button>
+              </form>
+              {error && (
+                <p className="newsletter-error">{error}</p>
+              )}
+              {submitStatus === 'success' && (
+                <p className="newsletter-success">✓ Subscribed successfully!</p>
+              )}
+              {submitStatus === 'error' && !error && (
+                <p className="newsletter-error">✗ Failed to subscribe. Try again.</p>
+              )}
             </div>
           </div>
         </div>

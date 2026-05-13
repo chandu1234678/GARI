@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import HomePage from './pages/HomePage';
@@ -10,11 +9,13 @@ import AchievementsPage from './pages/AchievementsPage';
 import ContactPage from './pages/ContactPage';
 import SponsorsPage from './pages/SponsorsPage';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/common/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navbar />
         

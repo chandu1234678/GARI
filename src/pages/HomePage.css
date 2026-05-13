@@ -9,6 +9,7 @@
 .overview-section {
   padding: 6rem 2rem;
   background: #ffffff;
+  position: relative;
 }
 
 .overview-grid {
@@ -101,29 +102,49 @@
 
 @media (max-width: 768px) {
   .overview-section {
-    padding: 4rem 1rem;
+    padding: 4rem 0;
+    overflow: hidden;
   }
   
   .overview-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin: 0;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .overview-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .overview-card {
+    flex: 0 0 85%;
     height: 320px;
+    scroll-snap-align: center;
   }
 
   .overview-card h3 {
-    font-size: 1.4rem;
-    bottom: 3.5rem;
+    font-size: 1.3rem;
+    bottom: 4rem;
     left: 1.5rem;
     right: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
   }
 
   .overview-card p {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     bottom: 1.5rem;
     left: 1.5rem;
     right: 1.5rem;
+    line-height: 1.5;
   }
 }

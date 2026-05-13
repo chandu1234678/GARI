@@ -8,8 +8,8 @@
 .timeline {
   position: relative;
   max-width: 800px;
-  margin: 3rem auto;
-  padding-left: 3rem;
+  margin: 1.5rem auto;
+  padding-left: 2.5rem;
 }
 
 .timeline::before {
@@ -24,56 +24,57 @@
 
 .timeline-item {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .timeline-marker {
   position: absolute;
-  left: -3.5rem;
-  top: 0.5rem;
-  width: 16px;
-  height: 16px;
+  left: -3rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #1a1a1a;
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 0 3px #e5e7eb;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #e5e7eb;
 }
 
 .timeline-content {
   background: #f9fafb;
-  padding: 2rem;
+  padding: 1.25rem;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
 }
 
 .timeline-year {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   background: #1a1a1a;
   color: #ffffff;
   border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-content h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .timeline-content p {
   color: #6b7280;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.92rem;
 }
 
 .status {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+  padding: 0.18rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
 }
 
@@ -94,29 +95,29 @@
 
 .competition-card {
   background: #ffffff;
-  padding: 2rem;
+  padding: 1.35rem;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   transition: all 0.2s ease;
 }
 
 .competition-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .comp-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .comp-year,
 .comp-category {
-  padding: 0.25rem 0.75rem;
+  padding: 0.18rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
 }
 
@@ -131,14 +132,15 @@
 }
 
 .competition-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .competition-card p {
   color: #6b7280;
+  font-size: 0.92rem;
 }
 
 /* Sponsors */
@@ -147,42 +149,46 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
   text-align: center;
 }
 
 .section-subtitle {
   color: #6b7280;
   max-width: 600px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 1.75rem;
+  font-size: 0.92rem;
 }
 
 .sponsor-cta {
   max-width: 600px;
-  margin: 0 auto 4rem;
-  padding: 3rem;
+  margin: 0 auto 2rem;
+  padding: 1.75rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 12px;
   color: #ffffff;
 }
 
 .sponsor-cta h3 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .sponsor-cta p {
-  margin-bottom: 2rem;
+  margin-bottom: 1.35rem;
   opacity: 0.9;
+  font-size: 0.92rem;
 }
 
 .sponsor-cta .btn {
   background: #ffffff;
   color: #667eea;
+  padding: 0.7rem 1.65rem;
+  font-size: 0.92rem;
 }
 
 .sponsor-cta .btn:hover {
@@ -192,13 +198,13 @@
 
 .sponsors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.35rem;
+  margin-top: 1.75rem;
 }
 
 .sponsor-card {
-  padding: 2rem;
+  padding: 1.35rem;
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -206,34 +212,98 @@
 }
 
 .sponsor-logo {
-  height: 80px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
   color: #9ca3af;
 }
 
 .sponsor-tier {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+  padding: 0.18rem 0.6rem;
   background: #1a1a1a;
   color: #ffffff;
   border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
 }
 
 @media (max-width: 768px) {
   .timeline {
-    padding-left: 2rem;
+    padding-left: 1.75rem;
   }
 
   .timeline-marker {
-    left: -2.5rem;
+    left: -2.25rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .competition-card {
+    padding: 1.25rem;
+  }
+
+  .competition-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .competition-card p {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
   }
 
   .sponsor-cta {
-    padding: 2rem 1.5rem;
+    padding: 1.75rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .sponsor-cta h3 {
+    font-size: 1.3rem;
+  }
+
+  .sponsor-cta p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .sponsor-card {
+    padding: 1.25rem;
+  }
+
+  .sponsor-logo {
+    height: 60px;
+    margin-bottom: 0.6rem;
   }
 }
