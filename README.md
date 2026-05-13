@@ -59,7 +59,7 @@ See **DEPLOY.md** for complete deployment instructions.
 
 **Lead**: bc833498@gmail.com  
 **Organization**: GITAM Aerospace Research Initiative  
-**University**: GITAM University, Visakhapatnam
+**University**: GITAM University, Hyderabad
 
 ---
 

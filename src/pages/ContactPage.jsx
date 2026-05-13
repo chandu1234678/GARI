@@ -170,7 +170,7 @@ const ContactPage = () => {
                 transition={{ delay: 0.2 }}
               >
                 <h3>📍 Location</h3>
-                <p>GITAM University, Visakhapatnam</p>
+                <p>GITAM University, Hyderabad</p>
               </motion.div>
             </div>
 
