@@ -370,7 +370,7 @@ async function handleNewsletter(email, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Team', email: 'noreply@gari.team' },
+          sender: { name: 'GARI Team', email: 'bc833498@gmail.com' },
           to: [{ email: validatedEmail }],
           subject: 'Welcome to GARI Newsletter 🚀',
           htmlContent: getNewsletterWelcomeEmail(validatedEmail),
@@ -386,7 +386,7 @@ async function handleNewsletter(email, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Website', email: 'noreply@gari.team' },
+          sender: { name: 'GARI Website', email: 'bc833498@gmail.com' },
           to: [{ email: 'bc833498@gmail.com', name: 'GARI Lead' }],
           subject: '🎯 New Newsletter Subscription',
           htmlContent: getLeadNotificationEmail('newsletter', { email: validatedEmail }),
@@ -452,7 +452,7 @@ async function handleContact({ name, email, subject, message }, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Website', email: 'noreply@gari.team' },
+          sender: { name: 'GARI Website', email: 'bc833498@gmail.com' },
           to: [{ email: 'bc833498@gmail.com', name: 'GARI Lead' }],
           replyTo: { email: validatedEmail, name: validatedName },
           subject: `[GARI Contact] ${validatedSubject}`,
@@ -474,7 +474,7 @@ async function handleContact({ name, email, subject, message }, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Team', email: 'noreply@gari.team' },
+          sender: { name: 'GARI Team', email: 'bc833498@gmail.com' },
           to: [{ email: validatedEmail, name: validatedName }],
           subject: 'We received your message - GARI',
           htmlContent: getContactConfirmationEmail(validatedName, validatedSubject),
