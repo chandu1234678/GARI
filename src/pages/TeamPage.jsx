@@ -190,7 +190,7 @@ const TeamPage = () => {
       branch: 'Mechanical Engineering',
       year: '3rd Year',
       description: 'Contributing to structural design, payload systems, and ground operations.',
-      image: '/team/e-krishna-chaitanya.jpg',
+      image: '',
       linkedin: null,
     },
     {
