@@ -52,7 +52,7 @@
 
 .team-card {
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 0;
   border: 1px solid #e2e8f0;
   transition: all 0.3s ease;
@@ -88,12 +88,11 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
-  filter: grayscale(20%);
+  will-change: transform;
 }
 
 .team-card:hover .team-image img {
   transform: scale(1.08);
-  filter: grayscale(0%);
 }
 
 .team-image span {
@@ -298,10 +297,23 @@
 
   .team-card {
     padding: 0;
+    border-radius: 4px;
   }
 
   .team-image {
     height: 180px;
+    border-radius: 0;
+  }
+  
+  .team-image img {
+    filter: none;
+    transition: none;
+    border-radius: 0;
+  }
+  
+  .team-card:hover .team-image img {
+    transform: none;
+    filter: none;
   }
 
   .team-info {
@@ -343,9 +355,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0.8rem;
   }
+  
+  .team-card {
+    border-radius: 4px;
+  }
 
   .team-image {
     height: 150px;
+    border-radius: 0;
   }
 
   .team-info {

@@ -278,8 +278,8 @@ const TeamPage = () => {
         className={`team-card ${activeCard === memberKey ? 'active' : ''}`}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.05 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ delay: index * 0.02, duration: 0.3 }}
         onClick={() => setActiveCard(activeCard === memberKey ? null : memberKey)}
       >
         <div className="team-image-container">
@@ -289,6 +289,7 @@ const TeamPage = () => {
                 src={member.image} 
                 alt={member.name}
                 loading="lazy"
+                decoding="async"
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.parentElement.innerHTML = `<div class="image-placeholder"><span>${member.name.split(' ').map(n => n[0]).join('')}</span></div>`;
