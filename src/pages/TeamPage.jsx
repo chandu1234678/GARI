@@ -100,6 +100,15 @@ const TeamPage = () => {
       linkedin: null,
     },
     {
+      name: 'Bodapati Bharat Chandra',
+      role: 'Ground Station & Software',
+      branch: 'Computer Science and Engineering',
+      year: '3rd Year',
+      description: 'Leading ground station software and mission control systems development.',
+      image: '/team/bodapati-bharat-chandra.jpg',
+      linkedin: null,
+    },
+    {
       name: 'Singam Sai Harshith',
       role: 'Avionics & Flight Software',
       branch: 'Aerospace Engineering',
@@ -115,15 +124,6 @@ const TeamPage = () => {
       year: '1st Year',
       description: 'Leading communication and RF systems for the CanSat project.',
       image: '/team/varshith-pappuri.jpg',
-      linkedin: null,
-    },
-    {
-      name: 'Bodapati Bharat Chandra',
-      role: 'Ground Station & Software',
-      branch: 'Computer Science and Engineering',
-      year: '3rd Year',
-      description: 'Leading ground station software and mission control systems development.',
-      image: '/team/bodapati-bharat-chandra.jpg',
       linkedin: null,
     },
     {
@@ -353,24 +353,6 @@ const TeamPage = () => {
             </p>
           </div>
 
-          {/* Rocket Team Section */}
-          <div className="team-section">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="team-division-title">Rocket Team</h2>
-              <p className="team-division-subtitle">
-                Developing advanced rocket systems for IN-SPACe competition
-              </p>
-            </motion.div>
-
-            <div className="team-grid">
-              {rocketTeam.map((member, index) => renderTeamMember(member, index, 'rocket'))}
-            </div>
-          </div>
-
           {/* CanSat Team Section */}
           <div className="team-section">
             <motion.div
@@ -386,6 +368,24 @@ const TeamPage = () => {
 
             <div className="team-grid">
               {cansatTeam.map((member, index) => renderTeamMember(member, index, 'cansat'))}
+            </div>
+          </div>
+
+          {/* Rocket Team Section */}
+          <div className="team-section">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="team-division-title">Rocket Team</h2>
+              <p className="team-division-subtitle">
+                Developing advanced rocket systems for IN-SPACe competition
+              </p>
+            </motion.div>
+
+            <div className="team-grid">
+              {rocketTeam.map((member, index) => renderTeamMember(member, index, 'rocket'))}
             </div>
           </div>
 
