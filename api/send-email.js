@@ -222,7 +222,7 @@ function getNewsletterWelcomeEmail(email) {
         </div>
         <div class="footer">
           <div class="footer-brand">GARI - GITAM Aerospace Research Initiative</div>
-          <div style="margin: 8px 0;">GITAM University, Visakhapatnam</div>
+          <div style="margin: 8px 0;">GITAM University, Hyderabad</div>
           <div style="margin: 8px 0;">Building the future of aerospace technology</div>
           <div style="margin-top: 16px; font-size: 12px; color: #9ca3af;">
             You're receiving this because you subscribed to our newsletter.<br>
@@ -271,7 +271,7 @@ function getContactConfirmationEmail(name, subject) {
         </div>
         <div class="footer">
           <div class="footer-brand">GARI - GITAM Aerospace Research Initiative</div>
-          <div style="margin: 8px 0;">GITAM University, Visakhapatnam</div>
+          <div style="margin: 8px 0;">GITAM University, Hyderabad</div>
           <div style="margin: 8px 0;">gari.team@gmail.com</div>
         </div>
       </div>
