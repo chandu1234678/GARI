@@ -242,7 +242,11 @@
 /* Responsive */
 @media (max-width: 768px) {
   .page-hero {
-    padding: 5rem 1.5rem 1.5rem;
+    padding: 5rem 1.25rem 1.5rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
   }
 
   .page-hero h1 {
@@ -256,7 +260,7 @@
   }
 
   .content-section {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 0.75rem;
   }
 
   .about-text {
