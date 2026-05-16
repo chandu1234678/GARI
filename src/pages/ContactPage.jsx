@@ -147,7 +147,7 @@ const ContactPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h3>📧 Email</h3>
+                <h3> Email</h3>
                 <p>contact@gari.live</p>
               </motion.div>
 
@@ -158,7 +158,7 @@ const ContactPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <h3>📱 Instagram</h3>
+                <h3> Instagram</h3>
                 <p>@gari.live</p>
               </motion.div>
 
@@ -169,7 +169,7 @@ const ContactPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <h3>📍 Location</h3>
+                <h3> Location</h3>
                 <p>GITAM University, Hyderabad</p>
               </motion.div>
             </div>
