@@ -197,7 +197,7 @@ function getNewsletterWelcomeEmail(email) {
     <body>
       <div class="wrapper">
         <div class="header">
-          <img src="https://raw.githubusercontent.com/chandu1234678/GARI/main/GARI/gari-react/public/gari-logo.png" alt="GARI Logo" style="width: 80px; height: 80px; margin-bottom: 16px;" />
+          <img src="https://gari.live/gari-logo.png" alt="GARI Logo" style="width: 80px; height: 80px; margin-bottom: 16px;" />
           <div class="brand">GARI</div>
           <div class="tagline">GITAM Aerospace Research Initiative</div>
         </div>
@@ -217,7 +217,7 @@ function getNewsletterWelcomeEmail(email) {
             We're excited to share our journey of building advanced aerospace systems and pushing the boundaries of student innovation.
           </div>
           <div class="cta">
-            <a href="https://gari.team" class="button">Visit Our Website</a>
+            <a href="https://gari.live" class="button">Visit Our Website</a>
           </div>
         </div>
         <div class="footer">
@@ -247,7 +247,7 @@ function getContactConfirmationEmail(name, subject) {
     <body>
       <div class="wrapper">
         <div class="header">
-          <img src="https://raw.githubusercontent.com/chandu1234678/GARI/main/GARI/gari-react/public/gari-logo.png" alt="GARI Logo" style="width: 80px; height: 80px; margin-bottom: 16px;" />
+          <img src="https://gari.live/gari-logo.png" alt="GARI Logo" style="width: 80px; height: 80px; margin-bottom: 16px;" />
           <div class="brand">GARI</div>
           <div class="tagline">GITAM Aerospace Research Initiative</div>
         </div>
@@ -272,7 +272,7 @@ function getContactConfirmationEmail(name, subject) {
         <div class="footer">
           <div class="footer-brand">GARI - GITAM Aerospace Research Initiative</div>
           <div style="margin: 8px 0;">GITAM University, Hyderabad</div>
-          <div style="margin: 8px 0;">gari.team@gmail.com</div>
+          <div style="margin: 8px 0;">contact@gari.live</div>
         </div>
       </div>
     </body>
@@ -375,7 +375,7 @@ async function handleNewsletter(email, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Team', email: 'factcheckai2@gmail.com' },
+          sender: { name: 'GARI Team', email: 'contact@gari.live' },
           to: [{ email: validatedEmail }],
           subject: 'Welcome to GARI Newsletter',
           htmlContent: getNewsletterWelcomeEmail(validatedEmail),
@@ -391,7 +391,7 @@ async function handleNewsletter(email, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Website', email: 'factcheckai2@gmail.com' },
+          sender: { name: 'GARI Website', email: 'contact@gari.live' },
           to: [{ email: 'bc833498@gmail.com', name: 'GARI Lead' }],
           subject: 'New Newsletter Subscription',
           htmlContent: getLeadNotificationEmail('newsletter', { email: validatedEmail }),
@@ -457,7 +457,7 @@ async function handleContact({ name, email, subject, message }, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Website', email: 'factcheckai2@gmail.com' },
+          sender: { name: 'GARI Website', email: 'contact@gari.live' },
           to: [{ email: 'bc833498@gmail.com', name: 'GARI Lead' }],
           replyTo: { email: validatedEmail, name: validatedName },
           subject: `[GARI Contact] ${validatedSubject}`,
@@ -479,7 +479,7 @@ async function handleContact({ name, email, subject, message }, apiKey, res) {
           'api-key': apiKey,
         },
         body: JSON.stringify({
-          sender: { name: 'GARI Team', email: 'factcheckai2@gmail.com' },
+          sender: { name: 'GARI Team', email: 'contact@gari.live' },
           to: [{ email: validatedEmail, name: validatedName }],
           subject: 'We received your message - GARI',
           htmlContent: getContactConfirmationEmail(validatedName, validatedSubject),
