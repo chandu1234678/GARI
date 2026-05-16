@@ -148,7 +148,7 @@ const ContactPage = () => {
                 viewport={{ once: true }}
               >
                 <h3>📧 Email</h3>
-                <p>gari.team@gmail.com</p>
+                <p>contact@gari.live</p>
               </motion.div>
 
               <motion.div
@@ -159,7 +159,7 @@ const ContactPage = () => {
                 transition={{ delay: 0.1 }}
               >
                 <h3>📱 Instagram</h3>
-                <p>@gari.team</p>
+                <p>@gari.live</p>
               </motion.div>
 
               <motion.div
@@ -256,7 +256,7 @@ const ContactPage = () => {
 
                 {submitStatus === 'error' && !errors.general && (
                   <div className="status-message error-message">
-                    ✗ Failed to send message. Please try again or email us directly at gari.team@gmail.com
+                    ✗ Failed to send message. Please try again or email us directly at contact@gari.live
                   </div>
                 )}
               </form>

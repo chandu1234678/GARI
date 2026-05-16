@@ -209,12 +209,12 @@ export const Contact = () => {
             <div className="info-item">
               <div className="info-icon">📧</div>
               <h4>Email</h4>
-              <p>gari.team@gmail.com</p>
+              <p>contact@gari.live</p>
             </div>
             <div className="info-item">
               <div className="info-icon">📱</div>
               <h4>Instagram</h4>
-              <p>@gari.team</p>
+              <p>@gari.live</p>
             </div>
             <div className="info-item">
               <div className="info-icon">📍</div>
@@ -224,7 +224,7 @@ export const Contact = () => {
           </div>
 
           <motion.a
-            href="mailto:gari.team@gmail.com"
+            href="mailto:contact@gari.live"
             className="btn btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

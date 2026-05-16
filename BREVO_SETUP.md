@@ -46,7 +46,7 @@ This guide explains how to set up the Brevo (formerly Sendinblue) email integrat
 1. Go to **Settings** → **Senders & IP**
 2. Add and verify your sender email domain
 3. For testing, you can use Brevo's default sender
-4. For production, verify your own domain (e.g., noreply@gari.team)
+4. For production, verify your own domain (e.g., contact@gari.live)
 
 ### 5. Configure Vercel Environment Variables
 
@@ -205,7 +205,7 @@ For higher limits, consider upgrading to a paid plan.
 
 - **Brevo Documentation**: https://developers.brevo.com/
 - **Brevo Support**: https://help.brevo.com/
-- **GARI Team**: gari.team@gmail.com
+- **GARI Team**: contact@gari.live
 
 ## File Structure
 
